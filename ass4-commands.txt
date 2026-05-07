@@ -1,0 +1,13 @@
+scp -i "vmkeypath" "vmkeypath" ubuntu@VM1-ip:/home/ubuntu/
+ssh -i "vmkeypath" ubuntu@vm1-ip
+ls to check
+chmod 400 vmkey.pem
+touch file1.txt
+echo "Hello from vm1">file1.txt
+cat file1.txt
+scp -i vmkey.pem file1.txt ubuntu@vm2-ip:/home/ubuntu/
+exit
+ssh -i "vm key path" ubuntu@vm2-ip
+ls
+cat file1.txt
+exit
